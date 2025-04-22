@@ -1,0 +1,34 @@
+[
+  {
+    "ContainingType": "ChantBotWebApi.Controllers.PlayerController",
+    "Method": "DailyCheckIn",
+    "RelativePath": "api/checkin",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ChantBotWebApi.Controllers.PlayerController",
+    "Method": "GetPlayerInfo",
+    "RelativePath": "api/info",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

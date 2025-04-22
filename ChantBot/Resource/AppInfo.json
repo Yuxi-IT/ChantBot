@@ -1,0 +1,6 @@
+﻿{
+  "Version": "0.0.1",
+  "VersionName": "Beta",
+  "BotToken": "8154999589:AAFl0kxSshJ7CLmuM9B3l5kmIQ4TzmzMYCU",
+  "SQLConnectionString": "Server=localhost;Database=ChantBot;Integrated Security=True;"
+}

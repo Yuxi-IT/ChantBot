@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "jI6RjUJmcsxHBdW+4TbDpPyrbJgF6dHEz4UZv99edWU=",
+  "Source": "ChantBotWebApi",
+  "BasePath": "_content/ChantBotWebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
