@@ -9,9 +9,9 @@ namespace ChantBot.Models
     public class BotSetting
     {
         public Own? Own { get; set; }
-        public OfficalUser[]? Admins { get; set; }
-        public OfficalUser[]? Customer { get; set; }
-        public string[]? Groups { get; set; }
+        public List<OfficalUser>? Admins { get; set; }
+        public List<OfficalUser>? Customer { get; set; }
+        public List<string>? Groups { get; set; }
         public string? WebApp { get; set; }
     }
 

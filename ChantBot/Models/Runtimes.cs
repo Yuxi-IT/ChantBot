@@ -11,17 +11,19 @@ namespace ChantBot.Models
 {
     public class Runtimes
     {
+        public static MongoDBM mongoDB = new(GetAppInfo().DBConnectionString);
+
         public static BotSetting GetCurrentBotSetting()
         {
             var botSetting = new BotSetting();
-            var connectS = GetAppInfo().SQLConnectionString;
+            var connectS = GetAppInfo().DBConnectionString;
             var botO = JsonConvert.DeserializeObject<BotSetting>(LoadDataFile("BotSetting.json").ToString());
 
             botSetting.Own = botO.Own;
             botSetting.WebApp = botO.WebApp;
-            botSetting.Customer = DatabaseManager.LoadCustomerData(connectS);
-            botSetting.Admins = DatabaseManager.LoadAdminsData(connectS);
-            botSetting.Groups = DatabaseManager.LoadGroupData(connectS);
+            botSetting.Customer = mongoDB.GetAllCustomers();
+            botSetting.Admins = mongoDB.GetAllAdmins();
+            botSetting.Groups = mongoDB.GetAllGroups();
 
             return botSetting;
         }
@@ -59,9 +61,9 @@ namespace ChantBot.Models
     }
     public class AppInfo
     {
-        public string? Version { get; set; }
-        public string? VersionName { get; set; }
-        public string? BotToken { get; set; }
-        public string? SQLConnectionString { get; set; }
+        public string? Version { get; set; } = "";
+        public string? VersionName { get; set; } = "";
+        public string? BotToken { get; set; } = "";
+        public string? DBConnectionString { get; set; } = "";
     }
 }

@@ -14,7 +14,7 @@ namespace ChantBot.Models
             string query = @"
     INSERT INTO Error (Date, Message, Source)
     VALUES (@Date, @Message, @Source)";
-            using (SqlConnection connection = new SqlConnection(Runtimes.GetAppInfo().SQLConnectionString))
+            using (SqlConnection connection = new SqlConnection(Runtimes.GetAppInfo().DBConnectionString))
             {
                 connection.Open();
                 using (SqlCommand command = new SqlCommand(query, connection))
@@ -31,7 +31,7 @@ namespace ChantBot.Models
             string query = "SELECT Date, Message, Source FROM Error";
             var errors = new List<ErrorEntry>();
 
-            using (SqlConnection connection = new SqlConnection(Runtimes.GetAppInfo().SQLConnectionString))
+            using (SqlConnection connection = new SqlConnection(Runtimes.GetAppInfo().DBConnectionString))
             {
                 connection.Open();
                 using (SqlCommand command = new SqlCommand(query, connection))

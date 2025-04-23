@@ -15,7 +15,7 @@ namespace ChantBot.Commands
         public static Game GetGameById(long gameId)
         {
             string query = "SELECT * FROM Games WHERE GameID = @GameID";
-            using (SqlConnection connection = new SqlConnection(Runtimes.GetAppInfo().SQLConnectionString))
+            using (SqlConnection connection = new SqlConnection(Runtimes.GetAppInfo().DBConnectionString))
             {
                 connection.Open();  // 显式打开连接
                 using (SqlCommand command = new SqlCommand(query, connection))
@@ -46,7 +46,7 @@ namespace ChantBot.Commands
             string query = @"
             INSERT INTO Games (GameID, StartDate, Players, GameType, MinAmount, GameResult)
             VALUES (@GameID, @StartDate, @Players, @GameType, @MinAmount, @GameResult)";
-            using (SqlConnection connection = new SqlConnection(Runtimes.GetAppInfo().SQLConnectionString))
+            using (SqlConnection connection = new SqlConnection(Runtimes.GetAppInfo().DBConnectionString))
             {
                 connection.Open();  // 显式打开连接
                 using (SqlCommand command = new SqlCommand(query, connection))
@@ -69,7 +69,7 @@ namespace ChantBot.Commands
             SET StartDate = @StartDate, Players = @Players, GameType = @GameType, 
                 MinAmount = @MinAmount, GameResult = @GameResult
             WHERE GameID = @GameID";
-            using (SqlConnection connection = new SqlConnection(Runtimes.GetAppInfo().SQLConnectionString))
+            using (SqlConnection connection = new SqlConnection(Runtimes.GetAppInfo().DBConnectionString))
             {
                 connection.Open();  // 显式打开连接
                 using (SqlCommand command = new SqlCommand(query, connection))

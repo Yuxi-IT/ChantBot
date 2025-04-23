@@ -9,19 +9,22 @@ using Microsoft.Extensions.Hosting;
 class Program
 {
     public static CancellationTokenSource cts = new();
-    public static TelegramBotClient bot;
-    public static User _bot;
+    public static TelegramBotClient? bot;
+    public static User? _bot;
     public async static Task Main(string[] args)
     {
         try
         {
             Console.ResetColor();
             var app = Runtimes.GetAppInfo();
-
+            if(app.BotToken != "")
+            {
+                Console.Error.WriteLine($"请在Resource/AppInfo.json中设置BotToken与DBConnectionString");
+            }
             bot = new(app.BotToken, cancellationToken: cts.Token);
 
-            DatabaseManager _dbm = new(app.SQLConnectionString);
-            _dbm.EnsureDatabaseAndTables();
+            Runtimes.mongoDB.EnsureDatabaseAndCollections();
+
 
             _bot = await bot.GetMe();
 

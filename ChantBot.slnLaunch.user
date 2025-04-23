@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "ChantServer",
+    "Projects": [
+      {
+        "Path": "ChantBot\\ChantBot.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "ChantBotWebApi\\ChantBotWebApi.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

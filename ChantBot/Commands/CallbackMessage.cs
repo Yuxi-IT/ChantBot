@@ -228,7 +228,7 @@ namespace ChantBot.Commands
                             await Program.bot.EditMessageText(msg.Chat, msgID, $"Hi ,{role}\n{StaticString.VersionInfo}", ParseMode.Html, replyMarkup: ReplyMarkupModels.AdminMenu());
                             break;
                         case "state":
-                            await Program.bot.EditMessageText(msg.Chat, msgID, $"Hi ,{role}\n{StaticString.StateInfo.Replace("{MEMORY}", $"{GC.GetTotalMemory(false) / 1024 / 1024}")}", ParseMode.Html, replyMarkup: ReplyMarkupModels.AdminMenu());
+                            await Program.bot.EditMessageText(msg.Chat, msgID, $"Hi ,{role}\n{StaticString.StateInfo}", ParseMode.Html, replyMarkup: ReplyMarkupModels.AdminMenu());
                             break;
                         case "help":
                             await Program.bot.EditMessageText(msg.Chat, msgID, $"Hi ,{role}\n{StaticString.HelpInfo}", ParseMode.Html, replyMarkup: ReplyMarkupModels.AdminMenu());

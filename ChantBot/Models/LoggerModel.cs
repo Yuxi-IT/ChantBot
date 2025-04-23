@@ -15,7 +15,7 @@ namespace ChantBot.Models
             string query = @"
     INSERT INTO Log (Date, Chat, From, Message)
     VALUES (@Date, @Chat, @From, @Message)";
-            using (SqlConnection connection = new SqlConnection(Runtimes.GetAppInfo().SQLConnectionString))
+            using (SqlConnection connection = new SqlConnection(Runtimes.GetAppInfo().DBConnectionString))
             {
                 connection.Open();
                 using (SqlCommand command = new SqlCommand(query, connection))
@@ -33,7 +33,7 @@ namespace ChantBot.Models
             string query = "SELECT Date, Chat, From, Message FROM Log";
             var logs = new List<LogEntry>();
 
-            using (SqlConnection connection = new SqlConnection(Runtimes.GetAppInfo().SQLConnectionString))
+            using (SqlConnection connection = new SqlConnection(Runtimes.GetAppInfo().DBConnectionString))
             {
                 connection.Open();
                 using (SqlCommand command = new SqlCommand(query, connection))

@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChantBot", "ChantBot\ChantBot.csproj", "{95F71EA6-39CE-443D-9771-26C0685F93B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChantBotWebApi", "ChantBotWebApi\ChantBotWebApi.csproj", "{4A321294-2FD4-4AC7-AEE6-3E1F402C6649}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{95F71EA6-39CE-443D-9771-26C0685F93B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95F71EA6-39CE-443D-9771-26C0685F93B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95F71EA6-39CE-443D-9771-26C0685F93B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95F71EA6-39CE-443D-9771-26C0685F93B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A321294-2FD4-4AC7-AEE6-3E1F402C6649}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A321294-2FD4-4AC7-AEE6-3E1F402C6649}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A321294-2FD4-4AC7-AEE6-3E1F402C6649}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A321294-2FD4-4AC7-AEE6-3E1F402C6649}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

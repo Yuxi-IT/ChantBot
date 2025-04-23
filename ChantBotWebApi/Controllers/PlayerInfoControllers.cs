@@ -21,7 +21,7 @@ namespace ChantBotWebApi.Controllers
                     Level = 1,
                     VIPLevel = 0,
                     Invites = new string[] { },
-                    PaymentCode = "",
+                    PaymentAddress = "",
                     LastCheckIn = DateTime.Now.ToString("yyyyMMdd"),
                     RegDate = DateTime.Now.ToString("yyyyMMdd"),
                     InviteCode = PlayerType.GenerateUuid()

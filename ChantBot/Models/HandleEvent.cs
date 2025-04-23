@@ -27,9 +27,9 @@ namespace ChantBot.Models
                 Console.ResetColor();
                 await Program.bot.SendMessage(Runtimes.GetCurrentBotSetting().Own.ID,
                     $"控制台报错\n" +
-                    $"Date:<code>{DateTime.Now.ToString("yyyy-MM-dd HH-mm-ss")}</code>\n" +
-                    $"Error: <code>{exception.Message}</code>\n" +
-                    $"Source: <code>{source}</code>\n" +
+                    $"时间:<code>{DateTime.Now.ToString("yyyy-MM-dd HH-mm-ss")}</code>\n" +
+                    $"错误: <code>{exception.Message}</code>\n" +
+                    $"来源: <code>{source}</code>\n" +
                     $"<a href=\"https://www.google.com/search?q=Telegram+Bot+{exception.Message}/\">谷歌搜索问题</a>",
                     parseMode: ParseMode.Html);
             }
